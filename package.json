@@ -1,0 +1,18 @@
+{
+  "name": "iot_message",
+  "version": "1.0.0",
+  "description": "nodejs mesagge iot",
+  "author": "Guillermo Sampallo <guillegmail.com>",
+  "license": "MIT",
+  "main": "app.js",
+  "keywords": [
+    "nodejs",
+    "bootstrap",
+    "express"
+  ],
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "mqtt": "^4.1.0"
+  }
+}
