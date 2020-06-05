@@ -6,13 +6,16 @@ Sencilla demostración sobre como enviar mensajes desde la web a un dispositivo 
 
 ## Instalacion
 
-Es necesario tener instalado nodejs, junto con la libreria mqtt. Para instalar se ejecuta:
+Es necesario tener instalado [nodejs](https://nodejs.org/es/), junto con la libreria mqtt. Para instalar los complementos se ejecuta:
 ```
 npm install
 npm install mqtt --save
 ```
 
-Finalmente para ejecutar: node app.js
+Finalmente para ejecutar la aplicacion: 
+```
+node app.js
+```
 
 ## Parametros
 
