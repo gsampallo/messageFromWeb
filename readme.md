@@ -1,3 +1,5 @@
+![Image](https://raw.githubusercontent.com/gsampallo/messageFromWeb/master/views/image/home.jpg)
+
 # Mensajes IoT desde la Web
 
 Sencilla demostración sobre como enviar mensajes desde la web a un dispositivo IoT.
@@ -6,6 +8,7 @@ Sencilla demostración sobre como enviar mensajes desde la web a un dispositivo 
 
 Es necesario tener instalado nodejs, junto con la libreria mqtt. Para instalar se ejecuta:
 ```
+npm install
 npm install mqtt --save
 ```
 
@@ -22,5 +25,5 @@ Existe un sencillo script en Python llamado mensajes.py que permite ver los mens
 Se instala ejecutando desde la consola
 
 ```
-pip install  paho.mqtt
+pip install paho.mqtt
 ```

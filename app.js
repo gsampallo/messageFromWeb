@@ -12,7 +12,6 @@ app.use('/', router);
 app.use(express.urlencoded())
 
 router.use(function (req,res,next) {
-    console.log('/' + req.method);
     next();
 });
   
@@ -22,17 +21,25 @@ router.get('/', function(req,res){
 
 app.post('/enviar', function(req,res){
     var msg = req.body.mensaje
-    var mqtt = require('mqtt')
+    var broker = req.body.broker
+    if(broker.search('mqtt://') == -1) {
+        broker = 'mqtt://' + broker;
+    }
+    var topic = req.body.topic
+    if(topic.length > 0) {
 
-    var client  = mqtt.connect('mqtt://192.168.1.20')
-    client.on('connect', function () {
-        
-        client.publish('MENSAJES', msg)
-        console.log("Mensaje enviado");
-      })
-    //client.end()
+        var mqtt = require('mqtt')
 
-    res.sendFile(path + 'index.html');
+        var client  = mqtt.connect(broker);
+        client.on('connect', function () {
+            
+            client.publish(topic, msg)
+            console.log("Mensaje enviado");
+            client.end();
+        })
+                
+        res.sendFile(path + 'index.html');
+    }
 });
   
 

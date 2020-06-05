@@ -30,9 +30,15 @@
                     <div class="form-group">
                       <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com"> -->
                     </div>
+                    <div class="form-group">
+                        <input type="text" id="broker" name="broker" class="form-control" value="mqtt://localhost" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="topic" name="topic" class="form-control" value="MENSAJES" />
+                    </div>
                     <div class="input-group mb-3">
                         <div class="input-group mb-3">
-                            <input type="text" id="mensaje" name="mensaje" class="form-control" placeholder="Mensaje" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                            <input type="text" id="mensaje" name="mensaje" class="form-control" value="Mensaje" aria-label="mensaje" aria-describedby="button-addon2" />
                             <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Enviar</button>
                             </div>
